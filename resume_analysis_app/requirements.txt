@@ -5,3 +5,7 @@ spacy
 transformers
 torch
 scikit-learn
+joblib
+numpy
+sentence-transformers
+

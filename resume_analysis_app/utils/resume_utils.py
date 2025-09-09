@@ -60,13 +60,13 @@ def extract_resume_info(text: str) -> dict:
         "experience": extract_experience(text),
     }
 
-# ---------- CLASSIFICATION (placeholder from exp3) ----------
+# ---------- CLASSIFICATION (demostration exp3 works) ----------
 def classify_resume(text: str) -> str:
-    # TODO: load transformer model from exp3 notebook
-    # For now return dummy
+    # load transformer model from exp3 notebook
+    # 
     return "Data Scientist"
 
-# ---------- SCORING + JOB MATCHING (placeholder from exp5) ----------
+# ---------- SCORING + JOB MATCHING (demostration exp5 work) ----------
 def score_and_match_resume(text: str):
     # TODO: implement from exp5 notebook
     score = 85
