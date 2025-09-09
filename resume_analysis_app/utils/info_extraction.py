@@ -1,7 +1,8 @@
 import re
 
+# --- Skills Dictionary ---
 SKILLS = [
-    "python", "java", "c++", "c#", "javascript", "typescript", "sql", "html", "css",
+    "python", "java","HTML5", "PHP","CSS","MYSQL", "c++", "c#", "javascript", "typescript", "sql", "html", "css",
     "react", "node.js", "angular", "vue.js", "django", "flask", "spring", "ruby on rails",
     "tensorflow", "pytorch", "scikit-learn", "keras",
     "aws", "azure", "google cloud", "docker", "kubernetes",
@@ -28,25 +29,25 @@ SKILLS = [
     "adaptability", "mentoring", "coaching", "training"
 ]
 
-
-# Common education keywords
+# --- Education Keywords ---
 EDUCATION_KEYWORDS = [
     "bachelor", "b.sc", "b.a", "b.com", "b.tech", "b.eng", "bba",
     "bachelor of science", "bachelor of arts", "bachelor of commerce",
     "bachelor of technology", "bachelor of engineering", "bachelor of business administration",
     "master", "m.sc", "m.a", "m.com", "m.tech", "mba", "master of science",
     "master of arts", "master of commerce", "master of technology",
-    "master of business administration",
+    "master of business administration","Data Science",
     "phd", "doctor of philosophy", "d.phil", "doctorate",
     "associate", "associate degree", "diploma", "certificate", "certification",
     "vocational training", "professional course",
-    "law degree", "llb", "llm", "medical degree", "md", "bds", "mds", "bachelors in nursing", "masters in nursing"
+    "law degree", "llb", "llm", "medical degree", "md", "bds", "mds", 
+    "bachelors in nursing", "masters in nursing",
+    "degree","BSc", "computer science","MSc","B.Tech","MTech","B.E.","M.E.","Data Analytics"
 ]
 
-
-# Job titles for experience extraction
+# --- Job Titles ---
 JOB_TITLES = [
-    "developer", "software engineer", "web developer", "frontend developer", "backend developer",
+    "database developer","java developer","developer", "software engineer", "web developer", "frontend developer", "backend developer",
     "fullstack developer", "data engineer", "data scientist", "machine learning engineer",
     "ai engineer", "nlp engineer", "devops engineer", "cloud engineer", "qa engineer",
     "system administrator", "network engineer", "security analyst", "it specialist",
@@ -61,7 +62,8 @@ JOB_TITLES = [
     "doctor", "nurse", "pharmacist", "research scientist", "lab technician",
     "biologist", "chemist", "physicist", "clinical researcher",
     "administrator", "specialist", "coordinator", "trainer", "mentor", "lecturer", "teacher",
-    "executive", "assistant", "intern", "technician", "supervisor"
+    "executive", "assistant", "intern", "technician", "supervisor",
+    "data analyst"
 ]
 
 
@@ -82,50 +84,21 @@ def extract_info(text: str):
     for skill in SKILLS:
         if re.search(rf"\b{re.escape(skill)}\b", text, re.IGNORECASE):
             found_skills.append(skill)
-
-    if found_skills:
-        info["skills"] = list(set(found_skills))
-    else:
-        info["skills"] = "No skills found"
+    info["skills"] = ", ".join(sorted(set(found_skills))) if found_skills else "No skills found"
 
     # --- Education Extraction ---
     found_education = []
     for edu in EDUCATION_KEYWORDS:
         if re.search(rf"\b{re.escape(edu)}\b", text, re.IGNORECASE):
             found_education.append(edu.title())
+    info["education"] = ", ".join(dict.fromkeys(found_education)) if found_education else "No education found"
 
-    if found_education:
-        info["education"] = list(set(found_education))
-    else:
-        info["education"] = "No education found"
-
-    # --- Experience Extraction ---
-    experience = {}
-
-    # Years of experience
-    years_match = re.findall(r'(\d+\+?\s+years?)', text, re.IGNORECASE)
-    if years_match:
-        experience["years"] = list(set([y.lower() for y in years_match]))
-
-    date_ranges = re.findall(
-        r'((?:\b(?:jan|feb|mar|apr|may|jun|jul|aug|sep|sept|oct|nov|dec)[a-z]*\s+\d{4})\s*[-–]\s*(?:\b(?:present|\d{4})))',
-        text,
-        re.IGNORECASE
-    )
-    if date_ranges:
-        experience["date_ranges"] = date_ranges
-
-    # Job titles
+    # --- Experience Extraction (string, not list) ---
     found_titles = []
     for title in JOB_TITLES:
-        if re.search(rf"\b{title}\b", text, re.IGNORECASE):
+        if re.search(rf"\b{re.escape(title)}\b[.,]?", text, re.IGNORECASE):
             found_titles.append(title.title())
-    if found_titles:
-        experience["job_titles"] = list(set(found_titles))
 
-    if experience:
-        info["experience"] = experience
-    else:
-        info["experience"] = "No experience found"
+    info["experience"] = ", ".join(dict.fromkeys(found_titles)) if found_titles else "No experience found"
 
     return info
