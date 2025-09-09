@@ -34,6 +34,3 @@ def classify_resume(text: str) -> str:
     embedding = get_bert_embedding(text)
     prediction = clf.predict(embedding)[0]
     return prediction
-
-sample_resume = "Experienced Python developer with knowledge of ML and NLP."
-print("Predicted Category:", classify_resume(sample_resume))
