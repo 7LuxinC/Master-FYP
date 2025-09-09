@@ -34,3 +34,4 @@ def classify_resume(text: str) -> str:
     embedding = get_bert_embedding(text)
     prediction = clf.predict(embedding)[0]
     return prediction
+
