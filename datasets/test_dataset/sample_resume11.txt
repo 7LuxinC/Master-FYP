@@ -1,0 +1,39 @@
+Name: John Kelly  
+Email: john.kelly@example.com  
+Phone: +353-87-123-4567  
+Location: Dublin, Ireland  
+
+Professional Summary:  
+Java Developer with over 6 years of hands-on experience building scalable web applications and backend systems. Skilled in Java SE, Spring Boot, and RESTful APIs, with a strong background in database integration and cloud deployment. Known for writing clean, efficient code and collaborating with teams to deliver high-performance software in Agile environments.
+
+Skills:  
+- Java SE, Java EE  
+- Spring Boot, Hibernate  
+- HTML, CSS, JavaScript  
+- MySQL, PostgreSQL  
+ 
+
+Experience:  
+Java Developer  
+FinTech Systems, Dublin  
+Feb 2021 – Present  
+- Built and maintained microservices using Spring Boot  
+- Improved system performance by optimizing backend logic and database queries  
+
+Software Engineer (Java)  
+RetailSoft Ltd., Galway  
+Jul 2017 – Jan 2021  
+- Developed backend modules for e-commerce platform  
+- Designed and optimized database schemas  
+
+Education:  
+MSc in Software Engineering – University College Dublin (2017)  
+BSc in Computer Science – University of Galway (2015)  
+
+Certifications:  
+- Oracle Certified Professional: Java SE  
+- AWS Certified Developer – Associate  
+
+Languages:  
+English  
+
