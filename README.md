@@ -34,6 +34,9 @@ The app combines these approaches to provide an interactive demo of automated re
 
 ---
 
+## Classification Model 
+- The model trained in the experiment is saved on Hugging Face at this repositoryhttps://huggingface.co/3Ellie/resume-transformer/tree/main. The application retrieves the model from Hugging Face and uses it to perform classification.”
+
 ## How to Run
 
 1. **Download** the project and navigate to its directory.  
