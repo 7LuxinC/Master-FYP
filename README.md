@@ -30,6 +30,13 @@ The app combines these approaches to provide an interactive demo of automated re
 
 ---
 
+## Datasets Used
+
+- **Experiments 1-3**: [Resume Dataset](https://www.kaggle.com/datasets/gauravduttakiit/resume-dataset)  
+- **Experiments 4-5**: [Resume and Job Description Dataset](https://www.kaggle.com/datasets/pranavvenugo/resume-and-job-description)  
+
+---
+
 ## Classification Model 
 - The model trained in the experiment is saved on Hugging Face at this repositoryhttps://huggingface.co/3Ellie/resume-transformer/tree/main. The application retrieves the model from Hugging Face and uses it to perform classification.
 
