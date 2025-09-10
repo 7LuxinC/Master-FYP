@@ -8,7 +8,7 @@ from utils.scoring import score_resume
 
 # --- Streamlit App ---
 st.set_page_config(page_title="Resume Analyzer", layout="wide")
-st.title("🗃️ Resume Analyser App")
+st.title("🗃️ Resume Analysis Tool using NLP and ML")
 
 
 # -------------------------------
