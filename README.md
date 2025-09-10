@@ -1,10 +1,6 @@
-#  Resume Analyser App
-
-This Resume Analyser App is developed as part of a dissertation project to demonstrate experiments in information extraction, classification, and resume evaluation.  
-The app used Natural Language Processing(NLP) approaches and machine learning(ML) methods to evaluate resumes effectively.  
-
-Users can upload resumes to see evaluations, and hiring teams can check if candidates fit the jobs they posted.
-
+#  Interactive Resume Analysis using NLP and Machine Learning
+- This repository contains all the experiments, datasets and Streamlit app development work carried out as part of a dissertation project. The project demostrates information extraction, classification, and resume evaluation using Natural Language Processing(NLP) and Machine Learning(ML) methods.
+- The web app applies the trained models and techniques used in the experiment to provide a pratical demostration where users can upload resumes for evaluation and hiring teams also can check if paritcular candidate fit the job they posted.
 ---
 
 ## About the Project
