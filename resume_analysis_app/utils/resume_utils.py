@@ -63,7 +63,6 @@ def extract_resume_info(text: str) -> dict:
 # ---------- CLASSIFICATION (demostration exp3 works) ----------
 def classify_resume(text: str) -> str:
     # load transformer model from exp3 notebook
-    # 
     return "Data Scientist"
 
 # ---------- SCORING + JOB MATCHING (demostration exp5 work) ----------

@@ -52,9 +52,7 @@ if uploaded_files:
     st.text_area("Extracted Text", text, height=250)
 
 
-    # -------------------------------
     # Extract structured info
-    # -------------------------------
     info = extract_info(text)
     st.subheader("🔍 Extracted Information")
 
@@ -84,9 +82,7 @@ if uploaded_files:
         st.write("No information extracted.")
 
 
-    # -------------------------------
     # Classification
-    # -------------------------------
     st.subheader("🧾 Resume Classification")
     try:
         category = classify_resume(text)
@@ -95,9 +91,7 @@ if uploaded_files:
         st.error(f"Error classifying resume: {e}")
 
 
-    # -------------------------------
     # Resume Score Section
-    # -------------------------------
     st.header("⭐ Resume Score Based on Job Description")
     job_description = st.text_area("Enter Job Description", height=150)
 

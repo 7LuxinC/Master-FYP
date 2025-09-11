@@ -2,7 +2,7 @@ import re
 
 # --- Skills Dictionary ---
 SKILLS = [
-    "python", "java","HTML5", "PHP","CSS","MYSQL", "c++", "c#", "javascript", "typescript", "sql", "html", "css",
+    "python", "java","HTML5", "PHP","MYSQL", "c++", "c#", "javascript", "typescript", "sql", "html", "css",
     "react", "node.js", "angular", "vue.js", "django", "flask", "spring", "ruby on rails",
     "tensorflow", "pytorch", "scikit-learn", "keras",
     "aws", "azure", "google cloud", "docker", "kubernetes",
